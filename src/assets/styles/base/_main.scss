@@ -18,6 +18,11 @@ button {
   font-weight: var(--font-w-regular);
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .text-secondary-content {
   font-size: var(--text-secondary-content);
   line-height: var(--lh-secondary-content);

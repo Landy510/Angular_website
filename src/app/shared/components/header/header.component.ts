@@ -13,68 +13,36 @@ interface HeaderItem {
 const sourceData = [
   {
     text: 'Products',
-    routerLink: '/',
+    routerLink: '',
     children: [
       {
         text: 'Sub Products',
-        routerLink: '/',
+        routerLink: '/products',
       },
       {
         text: 'Sub Products',
-        routerLink: '/',
+        routerLink: '/products',
         children: [
           {
             text: 'Tripple Products',
-            routerLink: '/',
+            routerLink: '/products',
             children: [
               {
                 text: 'Products',
-                routerLink: '/',
+                routerLink: '/products',
               },{
                 text: 'Products',
-                routerLink: '/',
+                routerLink: '/products',
               },{
                 text: 'Products',
-                routerLink: '/',
+                routerLink: '/products',
               },
             ]
           }
         ]
       },
     ]
-  },
-  {
-    text: 'Contact Us',
-    routerLink: '/',
-    children: [
-      {
-        text: 'Sub Products',
-        routerLink: '/',
-      },
-      {
-        text: 'Sub Products',
-        routerLink: '/',
-        children: [
-          {
-            text: 'Tripple Products',
-            routerLink: '/',
-            children: [
-              {
-                text: 'Products',
-                routerLink: '/',
-              },{
-                text: 'Products',
-                routerLink: '/',
-              },{
-                text: 'Products',
-                routerLink: '/',
-              },
-            ]
-          }
-        ]
-      },
-    ]
-  },
+  }
 ]
 
 @Component({
@@ -136,8 +104,16 @@ export class HeaderComponent implements OnInit{
         class="option"
         *ngFor="let item of itemMetaData"
       >
-        <span class="option-text">{{ item.text }}</span>
-        <span class="option-icon"></span>
+        <ng-container *ngIf="item.routerLink; else nonRouterOption">
+          <a [routerLink]="item.routerLink">
+            {{ item.text }}
+          </a>
+          <span class="option-icon"></span>
+        </ng-container>
+        <ng-template #nonRouterOption>
+          <span class="option-text">{{ item.text }}</span>
+          <span class="option-icon"></span>
+        </ng-template>
 
         <ng-container *ngIf="item.children && item.children.length !== 0">
           <app-header-sub-item

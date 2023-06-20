@@ -7,7 +7,7 @@ import { LayoutModule } from 'src/app/layout/layout.module';
 import { HeroImageModule } from 'src/app/shared/components/hero-image/hero-image.component';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -16,6 +16,6 @@ import { HeroImageModule } from 'src/app/shared/components/hero-image/hero-image
     HeroImageModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

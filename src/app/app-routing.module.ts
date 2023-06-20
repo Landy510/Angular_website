@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('src/app/features/pages/index/index.module').then(m => m.IndexModule)
+      },
+      {
+        path: 'products',
+        loadChildren: () => import('src/app/features/pages/products/products.module').then(m => m.ProductsModule)
       }
     ]
   }
