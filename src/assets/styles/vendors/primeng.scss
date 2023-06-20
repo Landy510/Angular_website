@@ -1,0 +1,19 @@
+// --- replace the breakpoints settings of primeflex.scss | START ---
+$sm: 376px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$breakpoints: (
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl
+);
+// --- END ---
+
+
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import '/node_modules/primeflex/primeflex.scss';

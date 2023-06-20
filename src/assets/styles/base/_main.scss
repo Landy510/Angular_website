@@ -1,0 +1,27 @@
+@import '../utils/mixins';
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+p {
+  font-size: var(--text-paragraph);
+  line-height: 21px;
+  font-weight: var(--font-w-regular);
+}
+
+button {
+  font-size: var(--text-button);
+  line-height: 24px;
+  font-weight: var(--font-w-regular);
+}
+
+.text-secondary-content {
+  font-size: var(--text-secondary-content);
+  line-height: var(--lh-secondary-content);
+  font-weight: var(--font-w-regular);
+}
+
+@include headline();

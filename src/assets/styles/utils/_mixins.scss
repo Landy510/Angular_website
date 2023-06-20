@@ -1,0 +1,14 @@
+@mixin headline() {
+  @for $i from 1 through 5 {
+    h#{$i} {
+      font-size: var(--text-h#{$i});
+      line-height: var(--lh-h#{$i});
+      @if $i <= 3 {
+        font-weight: var(--font-w-medium);
+      }
+      @else {
+        font-weight: var(--font-w-regular);
+      }
+    }
+  }
+}
