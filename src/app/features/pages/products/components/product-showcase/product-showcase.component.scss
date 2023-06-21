@@ -1,4 +1,6 @@
 .container {
+  max-width: 300px;
+
   .title {
     .square-icon {
       display: inline-block;
@@ -9,8 +11,6 @@
   }
 
   .img {
-    max-width: 300px;
-
     img {
       width: 100%;
     }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-
+import { InputNumberModule } from 'primeng/inputnumber';
 
 /**
  * import common primeng component
@@ -8,12 +8,18 @@ import { ButtonModule } from 'primeng/button';
  * @export
  * @class SharedPrimengModule
  */
+
+const importedPrimengModules = [
+  ButtonModule,
+  InputNumberModule
+]
+
 @NgModule({
   imports: [
-    ButtonModule
+    ...importedPrimengModules
   ],
   exports: [
-    ButtonModule
+    ...importedPrimengModules
   ]
 })
 export class SharedPrimengModule {}

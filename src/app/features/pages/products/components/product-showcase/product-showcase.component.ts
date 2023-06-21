@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-showcase.component.scss']
 })
 export class ProductShowcaseComponent {
-
+  quantity = 1;
 }
